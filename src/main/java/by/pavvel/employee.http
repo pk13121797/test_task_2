@@ -1,0 +1,33 @@
+###
+GET http://localhost:8080/employees
+
+###
+GET http://localhost:8080/employees/101
+
+###
+POST http://localhost:8080/employees
+Content-Type: application/json
+
+{
+  "name" : "Petr",
+  "surname" : "Smirnov",
+  "middleName" : "Petrovich",
+  "post" : "Middle"
+}
+
+###
+PUT http://localhost:8080/employees
+Content-Type: application/json
+
+{
+  "id" : "101",
+  "name" : "Alexey",
+  "surname" : "Petrov",
+  "middleName" : "Yegorovich",
+  "post" : "Junior"
+}
+
+###
+DELETE http://localhost:8080/employees/101
+
+###

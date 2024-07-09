@@ -1,0 +1,54 @@
+###
+GET http://localhost:8080/projects
+
+###
+GET http://localhost:8080/projects/101
+
+###
+POST http://localhost:8080/projects
+Content-Type: application/json
+
+{
+  "title" : "Java",
+  "abbreviation" : "AAN",
+  "description" : "description 1"
+}
+
+###
+POST http://localhost:8080/projects
+Content-Type: application/json
+
+{
+  "title" : "Java",
+  "abbreviation" : "AAN",
+  "description" : "description 1",
+  "tasks" : "101, 102"
+}
+
+###
+PUT http://localhost:8080/projects
+Content-Type: application/json
+
+{
+  "id" : "101",
+  "title" : "Spring",
+  "abbreviation" : "Spring",
+  "description" : "description 5"
+}
+
+###
+PUT http://localhost:8080/projects
+Content-Type: application/json
+
+{
+  "id" : "102",
+  "title" : "Spring",
+  "abbreviation" : "Spring",
+  "description" : "description 5",
+  "tasks" : "101, 102"
+}
+
+###
+DELETE http://localhost:8080/projects/103
+
+###

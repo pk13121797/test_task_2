@@ -1,0 +1,52 @@
+###
+GET http://localhost:8080/tasks
+
+###
+GET http://localhost:8080/tasks/101
+
+###
+POST http://localhost:8080/tasks
+Content-Type: application/json
+
+{
+"title" : "write code",
+"hours" : "4",
+"startDate" : "2021-04-13",
+"endDate" : "2025-04-15",
+"status" : "POSTPONED",
+"project" : "101"
+}
+
+###
+POST http://localhost:8080/tasks
+Content-Type: application/json
+
+{
+  "title" : "write code",
+  "hours" : "4",
+  "startDate" : "2021-04-13",
+  "endDate" : "2025-04-15",
+  "status" : "POSTPONED",
+  "project" : "102",
+  "employees" : "101, 102"
+}
+
+###
+PUT http://localhost:8080/tasks
+Content-Type: application/json
+
+{
+  "id" : "103",
+  "title" : "read article",
+  "hours" : "5",
+  "startDate" : "2020-04-30",
+  "endDate" : "2025-04-23",
+  "status" : "NOT_STARTED",
+  "project" : "102",
+  "employees" : "101, 103"
+}
+
+###
+DELETE http://localhost:8080/tasks/101
+
+###
